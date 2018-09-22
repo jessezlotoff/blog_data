@@ -1,2 +1,2 @@
 # blog_data
-Data and code for used for blog posts
+Data and code used for blog posts
