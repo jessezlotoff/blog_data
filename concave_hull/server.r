@@ -124,6 +124,13 @@ build_chart <- function(df, line_color="orange") {
 }
 
 
+#####
+valid_input <- function(inp) {
+    inp <- round(inp)
+    return(inp >=1 & inp <= 5000)
+}
+
+
 ############
 
 ### shiny function
@@ -138,21 +145,29 @@ function(input, output, session) {
 
     observeEvent(input$plot, { # plot button
         output$plotted <- reactive({1})
-        rv$pts <- build_point_set(input$num_points)
-        p <- build_chart(rv$pts)
-        output$chart <- renderPlot(p)
-        show("trace")
-        show("chart")
+        rv$tnum <- 0
+        if (valid_input(input$num_points) == TRUE) {
+            rv$pts <- build_point_set(input$num_points)
+            p <- build_chart(rv$pts)
+            output$chart <- renderPlot(p)
+            show("trace")
+            show("chart")
+        } else {
+            output$plotted <- reactive({0})
+            hide("trace")
+            rv$pts <- NULL
+            rv$tnum <- 0
+        }
     })
 
     observeEvent(input$reset, { # reset button
         output$plotted <- reactive({0})
         reset("chart")
+        reset("num_points")
         hide("chart")
         hide("trace")
         rv$pts <- NULL
         rv$tnum <- 0
-        rv$complete <- FALSE
     })
 
     observeEvent(input$trace, { # trace button

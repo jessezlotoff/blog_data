@@ -34,7 +34,7 @@ fluidPage(
         column(12,
             div(style = "background-color:#E0E2DF",
                 p(tags$b("Instructions")),
-                p("Click 'Plot' to create and show a random group of points.  Click 'Trace' to highlight the left-most point, and then continue clicking the button to draw the concave hull.")
+                p("Click 'Plot' to create and show a random group of points.  Click 'Trace' to highlight the left-most point, and then continue clicking the button to draw the concave hull.  The plot can handle numbers between 1 and 5,000.")
             )
         )
     )
