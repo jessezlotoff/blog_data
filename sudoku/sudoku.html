@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<style>
+#sudoku {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 300px;
+  height: 300px;
+  border: 2px solid;
+}
+
+#sudoku td, #sudoku th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#sudoku td:hover {background-color: #ddd;}
+
+.textbord
+{
+  border:1px;
+  border-style:solid;
+  padding:10 em;
+  width: 300px;
+}
+</style>
+<script type="text/javascript" src="sudoku.js"></script>
+
+<body>
+
+<h2>Sudoku</h2>
+
+<p style="background-color: #ddd;"><b>Instructions:</b><br/>
+  Click the "New Puzzle" button to generate a puzzle and start the timer.<br/>
+  Click an empty square to enter the appropriate number.<br/>
+  Click the "Check All" button to check your answers when finished.<br/>
+  You can also check or reveal an individual square with those buttons,<br/>
+  or check all squares while solving.<br/>
+  Status messages are displayed in the box at the bottom of the page.</p>
+
+
+<div id="grid">
+  <table id="sudoku">
+    <tr>
+      <td id="c1_1"> </td> <td id="c1_2"> </td> <td id="c1_3" style="border-right: 2px solid"> </td>
+      <td id="c1_4"> </td> <td id="c1_5"> </td> <td id="c1_6" style="border-right: 2px solid"> </td>
+      <td id="c1_7"> </td> <td id="c1_8"> </td> <td id="c1_9"> </td>
+    </tr>
+    <tr>
+      <td id="c2_1"> </td> <td id="c2_2"> </td> <td id="c2_3" style="border-right: 2px solid"> </td>
+      <td id="c2_4"> </td> <td id="c2_5"> </td> <td id="c2_6" style="border-right: 2px solid"> </td>
+      <td id="c2_7"> </td> <td id="c2_8"> </td> <td id="c2_9"> </td>
+    </tr>
+    <tr style="border-bottom: 2px solid">
+      <td id="c3_1"> </td> <td id="c3_2"> </td> <td id="c3_3" style="border-right: 2px solid"> </td>
+      <td id="c3_4"> </td> <td id="c3_5"> </td> <td id="c3_6" style="border-right: 2px solid"> </td>
+      <td id="c3_7"> </td> <td id="c3_8"> </td> <td id="c3_9"> </td>
+    </tr>
+    <tr>
+      <td id="c4_1"> </td> <td id="c4_2"> </td> <td id="c4_3" style="border-right: 2px solid"> </td>
+      <td id="c4_4"> </td> <td id="c4_5"> </td> <td id="c4_6" style="border-right: 2px solid"> </td>
+      <td id="c4_7"> </td> <td id="c4_8"> </td> <td id="c4_9"> </td>
+    </tr>
+    <tr>
+      <td id="c5_1"> </td> <td id="c5_2"> </td> <td id="c5_3" style="border-right: 2px solid"> </td>
+      <td id="c5_4"> </td> <td id="c5_5"> </td> <td id="c5_6" style="border-right: 2px solid"> </td>
+      <td id="c5_7"> </td> <td id="c5_8"> </td> <td id="c5_9"> </td>
+    </tr>
+    <tr style="border-bottom: 2px solid">
+      <td id="c6_1"> </td> <td id="c6_2"> </td> <td id="c6_3" style="border-right: 2px solid"> </td>
+      <td id="c6_4"> </td> <td id="c6_5"> </td> <td id="c6_6" style="border-right: 2px solid"> </td>
+      <td id="c6_7"> </td> <td id="c6_8"> </td> <td id="c6_9"> </td>
+    </tr>
+    <tr>
+      <td id="c7_1"> </td> <td id="c7_2"> </td> <td id="c7_3" style="border-right: 2px solid"> </td>
+      <td id="c7_4"> </td> <td id="c7_5"> </td> <td id="c7_6" style="border-right: 2px solid"> </td>
+      <td id="c7_7"> </td> <td id="c7_8"> </td> <td id="c7_9"> </td>
+    </tr>
+    <tr>
+      <td id="c8_1"> </td> <td id="c8_2"> </td> <td id="c8_3" style="border-right: 2px solid"> </td>
+      <td id="c8_4"> </td> <td id="c8_5"> </td> <td id="c8_6" style="border-right: 2px solid"> </td>
+      <td id="c8_7"> </td> <td id="c8_8"> </td> <td id="c8_9"> </td>
+    </tr>
+    <tr>
+      <td id="c9_1"> </td> <td id="c9_2"> </td> <td id="c9_3" style="border-right: 2px solid"> </td>
+      <td id="c9_4"> </td> <td id="c9_5"> </td> <td id="c9_6" style="border-right: 2px solid"> </td>
+      <td id="c9_7"> </td> <td id="c9_8"> </td> <td id="c9_9"> </td>
+    </tr>
+  </table>
+</div>
+
+<br>
+
+
+<p id="gamebuttons" class="textbord">Puzzle:<br/>
+<button type="button"
+onclick="getSetupPuzzle()">
+New Puzzle</button>
+
+<button type="button"
+onclick="setupGrid(unsolved);startTimer();">
+Restart</button>
+
+<br/><br/>
+</p>
+
+<p id="checkbuttons" class="textbord">Check:<br/>
+
+<button type="button"
+onclick="checkSquare(solution)">
+Check Square</button>
+
+<button type="button"
+onclick="revealSquare(solution)">
+Reveal Square</button>
+<br/>
+<button type="button"
+onclick="alert(stopTimer() + ' elapsed')">
+Check Time</button>
+
+<button type="button"
+onclick="checkGrid(solution)">
+Check All</button>
+
+<br/><br/>
+</p>
+
+<p id="status" class="textbord">Status:<br/><br/></p>
+
+</body>
+</html>
