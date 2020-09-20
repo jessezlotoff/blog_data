@@ -1,0 +1,203 @@
+variable	label
+B00001_001	Unweighted Sample Count of the Population
+B00002_001	Unweighted Sample Housing Units
+B01001_001	Total: Sex by Age
+B01001_002	Male: Sex by Age
+B01001_003	Male:!!Under 5 years
+B01001_004	Male:!!5 to 9 years
+B01001_005	Male:!!10 to 14 years
+B01001_006	Male:!!15 to 17 years
+B01001_007	Male:!!18 and 19 years
+B01001_008	Male:!!20 years
+B01001_009	Male:!!21 years
+B01001_010	Male:!!22 to 24 years
+B01001_011	Male:!!25 to 29 years
+B01001_012	Male:!!30 to 34 years
+B01001_013	Male:!!35 to 39 years
+B01001_014	Male:!!40 to 44 years
+B01001_015	Male:!!45 to 49 years
+B01001_016	Male:!!50 to 54 years
+B01001_017	Male:!!55 to 59 years
+B01001_018	Male:!!60 and 61 years
+B01001_019	Male:!!62 to 64 years
+B01001_020	Male:!!65 and 66 years
+B01001_021	Male:!!67 to 69 years
+B01001_022	Male:!!70 to 74 years
+B01001_023	Male:!!75 to 79 years
+B01001_024	Male:!!80 to 84 years
+B01001_025	Male:!!85 years and over
+B01001_026	Female: Sex by Age
+B01001_027	Female:!!Under 5 years
+B01001_028	Female:!!5 to 9 years
+B01001_029	Female:!!10 to 14 years
+B01001_030	Female:!!15 to 17 years
+B01001_031	Female:!!18 and 19 years
+B01001_032	Female:!!20 years
+B01001_033	Female:!!21 years
+B01001_034	Female:!!22 to 24 years
+B01001_035	Female:!!25 to 29 years
+B01001_036	Female:!!30 to 34 years
+B01001_037	Female:!!35 to 39 years
+B01001_038	Female:!!40 to 44 years
+B01001_039	Female:!!45 to 49 years
+B01001_040	Female:!!50 to 54 years
+B01001_041	Female:!!55 to 59 years
+B01001_042	Female:!!60 and 61 years
+B01001_043	Female:!!62 to 64 years
+B01001_044	Female:!!65 and 66 years
+B01001_045	Female:!!67 to 69 years
+B01001_046	Female:!!70 to 74 years
+B01001_047	Female:!!75 to 79 years
+B01001_048	Female:!!80 to 84 years
+B01001_049	Female:!!85 years and over
+B06007_001	Total: Language
+B06007_002	Speak only English
+B06007_003	Speak Spanish:
+B06009_001	Total: Education
+B06009_002	Less than high school graduate
+B06009_003	High school graduate (includes equivalency)
+B06009_004	Some college or associate's degree
+B06009_005	Bachelor's degree
+B06009_006	Graduate or professional degree
+B06010_001	Total: Income
+B06010_002	No income
+B06010_004	$1 to $9,999 or loss
+B06010_005	$10,000 to $14,999
+B06010_006	$15,000 to $24,999
+B06010_007	$25,000 to $34,999
+B06010_008	$35,000 to $49,999
+B06010_009	$50,000 to $64,999
+B06010_010	$65,000 to $74,999
+B06010_011	$75,000 or more
+B06008_001	Total: Married
+B06008_002	Never married
+B06008_003	Now married, except separated
+B06008_004	Divorced
+B06008_005	Separated
+B06008_006	Widowed
+B07401_001	Total living in area 1 year ago:
+B07401_002	1 to 4 years
+B07401_003	5 to 17 years
+B07401_004	18 and 19 years
+B07401_005	20 to 24 years
+B07401_006	25 to 29 years
+B07401_007	30 to 34 years
+B07401_008	35 to 39 years
+B07401_009	40 to 44 years
+B07401_010	45 to 49 years
+B07401_011	50 to 54 years
+B07401_012	55 to 59 years
+B07401_013	60 to 64 years
+B07401_014	65 to 69 years
+B07401_015	70 to 74 years
+B07401_016	75 years and over
+B05001_001	Total:
+B05001_002	U.S. citizen, born in the United States
+B05001_003	U.S. citizen, born in Puerto Rico or U.S. Island Areas
+B05001_004	U.S. citizen, born abroad of American parent(s)
+B05001_005	U.S. citizen by naturalization
+B05001_006	Not a U.S. citizen
+B05010_001	Total: Income vs Poverty Level
+B05010_002	Under 1.00:
+B05010_010	1.00 to 1.99:
+B05010_018	2.0  and over:
+B17001_001	Total: Poverty Level
+B17001_002	Income in the past 12 months below poverty level:
+B17001_031	Income in the past 12 months at or above poverty level:
+B19051_001	Total HH earnings
+B19051_002	With earnings
+B19051_003	No earnings
+B12006_001	Total:
+B12006_002	Never married:
+B12006_003	Male:
+B12006_004	In labor force:
+B12006_005	Employed or in Armed Forces
+B12006_006	Unemployed
+B12006_007	Not in labor force
+B12006_008	Female:
+B12006_009	In labor force:
+B12006_010	Employed or in Armed Forces
+B12006_011	Unemployed
+B12006_012	Not in labor force
+B12006_013	Now married (except separated):
+B12006_014	Male:
+B12006_015	In labor force:
+B12006_016	Employed or in Armed Forces
+B12006_017	Unemployed
+B12006_018	Not in labor force
+B12006_019	Female:
+B12006_020	In labor force:
+B12006_021	Employed or in Armed Forces
+B12006_022	Unemployed
+B12006_023	Not in labor force
+B12006_024	Separated:
+B12006_025	Male:
+B12006_026	In labor force:
+B12006_027	Employed or in Armed Forces
+B12006_028	Unemployed
+B12006_029	Not in labor force
+B12006_030	Female:
+B12006_031	In labor force:
+B12006_032	Employed or in Armed Forces
+B12006_033	Unemployed
+B12006_034	Not in labor force
+B12006_035	Widowed:
+B12006_036	Male:
+B12006_037	In labor force:
+B12006_038	Employed or in Armed Forces
+B12006_039	Unemployed
+B12006_040	Not in labor force
+B12006_041	Female:
+B12006_042	In labor force:
+B12006_043	Employed or in Armed Forces
+B12006_044	Unemployed
+B12006_045	Not in labor force
+B12006_046	Divorced:
+B12006_047	Male:
+B12006_048	In labor force:
+B12006_049	Employed or in Armed Forces
+B12006_050	Unemployed
+B12006_051	Not in labor force
+B12006_052	Female:
+B12006_053	In labor force:
+B12006_054	Employed or in Armed Forces
+B12006_055	Unemployed
+B12006_056	Not in labor force
+B19083_001	gini index of income inequality
+B11001_001	Total: Household type
+B11001_003	Married-couple family
+B11001_005	Male householder, no wife present
+B11001_006	Female householder, no husband present
+B11001_008	Householder living alone
+B08301_001	Total: means of transportation to work
+B08301_003	Drove alone
+B08301_004	Carpooled:
+B08301_010	Public transportation (excluding taxicab):
+B08301_016	Taxicab
+B08301_017	Motorcycle
+B08301_018	Bicycle
+B08301_019	Walked
+B08301_020	Other means
+B08301_021	Worked at home
+B08303_001	Total: Commute to work
+B08303_002	Less than 5 minutes
+B08303_003	5 to 9 minutes
+B08303_004	10 to 14 minutes
+B08303_005	15 to 19 minutes
+B08303_006	20 to 24 minutes
+B08303_007	25 to 29 minutes
+B08303_008	30 to 34 minutes
+B08303_009	35 to 39 minutes
+B08303_010	40 to 44 minutes
+B08303_011	45 to 59 minutes
+B08303_012	60 to 89 minutes
+B08303_013	90 or more minutes
+B25034_001	Total: structures
+B25035_001	Median year structure built
+B24081_001	Total: employment type
+B24081_002	Private for-profit wage and salary workers:
+B24081_005	Private not-for-profit wage and salary workers
+B24081_006	Local government workers
+B24081_007	State government workers
+B24081_008	Federal government workers
+B24081_009	Self-employed in own not incorporated business workers and unpaid family workers
