@@ -1,7 +1,3 @@
-// Test of Javascript
-// Jesse Zlotoff
-// 2/6/19
-
 start=0;
 
 //--------
@@ -214,10 +210,9 @@ function getPuzzlelocal() {
 
 //--------
 
-async function getSetupPuzzle() {
-  var site = 'https://jessezlotoff.pythonanywhere.com/puzzle';
+async function getSetupPuzzle(url) {
 
-  const response = await fetch(site, { method: 'GET', mode: 'cors', headers: {
+  const response = await fetch(url, { method: 'GET', mode: 'cors', headers: {
             "Accept": "application/json"}
       });
   const puz = await response.json();
@@ -228,22 +223,3 @@ async function getSetupPuzzle() {
   startTimer();
 
 }
-
-//--------
-
-function test() {
-  puzzle = setupNew();
-  //alert(JSON.stringify(puzzle));
-  alert(puzzle.to_solve);
-}
-
-//--------
-
-function newPuzzle() {
-  puzzle = getPuzzle();
-  setupGrid(puzzle.to_solve);
-  startTimer();
-
-}
-
-//-------------------------------
