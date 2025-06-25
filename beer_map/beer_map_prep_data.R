@@ -12,28 +12,7 @@ library(tidyverse)
 breweries <- read_csv("all_breweries.csv")
 
 ### pull out state, clean it up
-breweries$state <- breweries$addr2 %>%
-    str_replace("^[^,]+, ([A-Za-z]{2}).*", "\\1")
-
-prob_vals <- breweries %>%
-    select(addr2, state) %>%
-    filter(!str_detect(state, "^[A-Z]{2}$")) %>%
-    unique()
-print(prob_vals)
-
-# manually check/fix problem data
-breweries$state <- breweries$state %>%
-    str_replace("Ma", "ME") %>%
-    str_replace(", (..)", "\\1") %>%
-    str_replace(",", "") %>%
-    str_to_upper()
-
-prob_vals <- breweries %>%
-    select(addr2, state) %>%
-    filter(!str_detect(state, "^[A-Z]{2}$")) %>%
-    unique()
-print(prob_vals)
-rm(prob_vals)
+# step moved to prep_beer_data.py
 
 ### find and remove duplicates by brewery name
 breweries <- breweries %>%
@@ -57,7 +36,7 @@ tab <- breweries %>%
     distinct() %>%
     arrange(state)
 print(tab)
-rm(prob_vals, tab)
+rm(tab)
 
 ##### ratings data
 ratings_raw <- read_csv("beer_history_personal.csv")
@@ -83,7 +62,7 @@ print(prob_vals)
 
 # manually check/fix problem data
 ratings$brewery_state <- ratings$brewery_state %>%
-    str_replace("Pa", "PA")
+ str_replace("Pa", "PA")
 
 rm(ratings_raw)
 
